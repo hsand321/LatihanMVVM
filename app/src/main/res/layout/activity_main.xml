@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.latihan_mvvm.viewmodel.MainViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".view.MainActivity">
+
+        <EditText
+            android:text="@={viewmodel.etAlas}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="alas"/>
+
+        <EditText
+            android:text="@={viewmodel.etTinggi}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="tinggi"/>
+
+        <Button
+            android:onClick="@{()->viewmodel.btnLuasSegitiga}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="hasil luas segitiga"/>
+
+
+    </LinearLayout>
+</layout>
